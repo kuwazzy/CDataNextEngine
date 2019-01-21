@@ -1,0 +1,72 @@
+<rsb:script>
+   <rsb:info title="master_shop" desc="">
+    <attr name="shop_id"                              xs:type="integer"       other:xPath="shop_id" />
+    <attr name="shop_name"                            xs:type="string"        other:xPath="shop_name" />
+    <attr name="shop_kana"                            xs:type="string"        other:xPath="shop_kana" />
+    <attr name="shop_abbreviated_name"                xs:type="string"        other:xPath="shop_abbreviated_name" />
+    <attr name="shop_handling_goods_name"             xs:type="string"        other:xPath="shop_handling_goods_name" />
+    <attr name="shop_close_date"                      xs:type="datetime"      other:xPath="shop_close_date" />
+    <attr name="shop_note"                            xs:type="string"        other:xPath="shop_note" />
+    <attr name="shop_mall_id"                         xs:type="integer"       other:xPath="shop_mall_id" />
+    <attr name="shop_authorization_type_id"           xs:type="string"        other:xPath="shop_authorization_type_id" />
+    <attr name="shop_authorization_type_name"         xs:type="string"        other:xPath="shop_authorization_type_name" />
+    <attr name="shop_tax_id"                          xs:type="string"        other:xPath="shop_tax_id" />
+    <attr name="shop_tax_name"                        xs:type="string"        other:xPath="shop_tax_name" />
+    <attr name="shop_currency_unit_id"                xs:type="string"        other:xPath="shop_currency_unit_id" />
+    <attr name="shop_currency_unit_name"              xs:type="string"        other:xPath="shop_currency_unit_name" />
+    <attr name="shop_tax_calculation_sequence_id"     xs:type="string"        other:xPath="shop_tax_calculation_sequence_id" />
+    <attr name="shop_type_id"                         xs:type="string"        other:xPath="shop_type_id" />
+    <attr name="shop_deleted_flag"                    xs:type="string"        other:xPath="shop_deleted_flag" />
+    <attr name="shop_creation_date"                   xs:type="datetime"      other:xPath="shop_creation_date" />
+    <attr name="shop_last_modified_date"              xs:type="datetime"      other:xPath="shop_last_modified_date" />
+    <attr name="shop_last_modified_null_safe_date"    xs:type="datetime"      other:xPath="shop_last_modified_null_safe_date" />
+    <attr name="shop_creator_id"                      xs:type="integer"       other:xPath="shop_creator_id" />
+    <attr name="shop_creator_name"                    xs:type="string"        other:xPath="shop_creator_name" />
+    <attr name="shop_last_modified_by_id"             xs:type="integer"       other:xPath="shop_last_modified_by_id" />
+    <attr name="shop_last_modified_by_null_safe_id"   xs:type="integer"       other:xPath="shop_last_modified_by_null_safe_id" />
+    <attr name="shop_last_modified_by_name"           xs:type="string"        other:xPath="shop_last_modified_by_name" />
+    <attr name="shop_last_modified_by_null_safe_name" xs:type="string"        other:xPath="shop_last_modified_by_null_safe_name" />
+  </rsb:info>
+
+  <!-- Column XPaths are relative to a RepeatElement that splits the JSON into rows. -->
+  <rsb:set attr="uri"  value="https://api.next-engine.org/api_v1_master_shop/search" />
+  <rsb:set attr="RepeatElement"  value="/data" />
+  <rsb:set attr="ContentType"  value="application/x-www-form-urlencoded" />
+  <rsb:set attr="Method" value="POST"/>
+  <rsb:set attr="Data">access_token=[_connection.access_token]&refresh_token=[_connection.refresh_token]&fields=shop_id,shop_name,shop_kana,shop_abbreviated_name,shop_handling_goods_name,shop_close_date,shop_note,shop_mall_id,shop_authorization_type_id,shop_authorization_type_name,shop_tax_id,shop_tax_name,shop_currency_unit_id,shop_currency_unit_name,shop_tax_calculation_sequence_id,shop_type_id,shop_deleted_flag,shop_creation_date,shop_last_modified_date,shop_last_modified_null_safe_date,shop_creator_id,shop_creator_name,shop_last_modified_by_id,shop_last_modified_by_null_safe_id,shop_last_modified_by_name,shop_last_modified_by_null_safe_name</rsb:set>
+  <rsb:set attr="encodepostdata" value="false" />
+
+  <!-- The GET method corresponds to SELECT. Within the script block, you can see the URI modified to append a query string parameter. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <rsb:script method="GET">
+    <rsb:call op="jsonproviderGet">
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->
+  <rsb:script method="POST">
+    <rsb:set attr="method" value="POST"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Inserts are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->
+  <rsb:script method="MERGE">
+    <rsb:set attr="method" value="PUT"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Updates are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->
+  <rsb:script method="DELETE">
+    <rsb:set attr="method" value="DELETE"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Deletes are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+</rsb:script>

@@ -1,0 +1,66 @@
+<rsb:script>
+   <rsb:info title="master_stock" desc="">
+    <attr name="stock_goods_id"                          xs:type="string"        other:xPath="stock_goods_id" />
+    <attr name="stock_quantity"                          xs:type="integer"       other:xPath="stock_quantity" />
+    <attr name="stock_allocation_quantity"               xs:type="integer"       other:xPath="stock_allocation_quantity" />
+    <attr name="stock_defective_quantity"                xs:type="integer"       other:xPath="stock_defective_quantity" />
+    <attr name="stock_remaining_order_quantity"          xs:type="integer"       other:xPath="stock_remaining_order_quantity" />
+    <attr name="stock_out_quantity"                      xs:type="integer"       other:xPath="stock_out_quantity" />
+    <attr name="stock_free_quantity"                     xs:type="integer"       other:xPath="stock_free_quantity" />
+    <attr name="stock_advance_order_quantity"            xs:type="integer"       other:xPath="stock_advance_order_quantity" />
+    <attr name="stock_advance_order_allocation_quantity" xs:type="integer"       other:xPath="stock_advance_order_allocation_quantity" />
+    <attr name="stock_advance_order_free_quantity"       xs:type="integer"       other:xPath="stock_advance_order_free_quantity" />
+    <attr name="stock_deleted_flag"                      xs:type="string"        other:xPath="stock_deleted_flag" />
+    <attr name="stock_creation_date"                     xs:type="datetime"      other:xPath="stock_creation_date" />
+    <attr name="stock_last_modified_date"                xs:type="datetime"      other:xPath="stock_last_modified_date" />
+    <attr name="stock_last_modified_null_safe_date"      xs:type="datetime"      other:xPath="stock_last_modified_null_safe_date" />
+    <attr name="stock_creator_id"                        xs:type="integer"       other:xPath="stock_creator_id" />
+    <attr name="stock_creator_name"                      xs:type="string"        other:xPath="stock_creator_name" />
+    <attr name="stock_last_modified_by_id"               xs:type="integer"       other:xPath="stock_last_modified_by_id" />
+    <attr name="stock_last_modified_by_null_safe_id"     xs:type="integer"       other:xPath="stock_last_modified_by_null_safe_id" />
+    <attr name="stock_last_modified_by_name"             xs:type="string"        other:xPath="stock_last_modified_by_name" />
+    <attr name="stock_last_modified_by_null_safe_name"   xs:type="string"        other:xPath="stock_last_modified_by_null_safe_name" />
+  </rsb:info>
+
+  <!-- Column XPaths are relative to a RepeatElement that splits the JSON into rows. -->
+  <rsb:set attr="uri"  value="https://api.next-engine.org/api_v1_master_stock/search" />
+  <rsb:set attr="RepeatElement"  value="/data" />
+  <rsb:set attr="ContentType"  value="application/x-www-form-urlencoded" />
+  <rsb:set attr="Method" value="POST"/>
+  <rsb:set attr="Data">access_token=ac92684f2ed38a1500d35f087e17b47a546dbec641d7f9201144736fdc4793b706477be5578ffa25ec03ed60b75f9e96959d6ab4beb5a79d517528ac568d5eec&refresh_token=5b1fcbafceb157e002a2af8d8bee65a16c9f45c638eb292fbe95468b82c0b1896ca9eeb338bdc0d2a794f48a87ebcca00500fab6d6014f16fb7ac9e9ea48fb4b&fields=stock_goods_id,stock_quantity,stock_allocation_quantity,stock_defective_quantity,stock_remaining_order_quantity,stock_out_quantity,stock_free_quantity,stock_advance_order_quantity,stock_advance_order_allocation_quantity,stock_advance_order_free_quantity,stock_deleted_flag,stock_creation_date,stock_last_modified_date,stock_last_modified_null_safe_date,stock_creator_id,stock_creator_name,stock_last_modified_by_id,stock_last_modified_by_null_safe_id,stock_last_modified_by_name,stock_last_modified_by_null_safe_name</rsb:set>
+  <rsb:set attr="encodepostdata" value="false" />
+
+  <!-- The GET method corresponds to SELECT. Within the script block, you can see the URI modified to append a query string parameter. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <rsb:script method="GET">
+    <rsb:call op="jsonproviderGet">
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->
+  <rsb:script method="POST">
+    <rsb:set attr="method" value="POST"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Inserts are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->
+  <rsb:script method="MERGE">
+    <rsb:set attr="method" value="PUT"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Updates are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->
+  <rsb:script method="DELETE">
+    <rsb:set attr="method" value="DELETE"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Deletes are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+</rsb:script>

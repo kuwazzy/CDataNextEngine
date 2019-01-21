@@ -1,0 +1,32 @@
+<rsb:script>
+   <rsb:info title="api_neauth" desc="">
+    <attr name="access_token"            xs:type="string"       other:xPath="access_token" />
+    <attr name="company_app_header"      xs:type="string"       other:xPath="company_app_header" />
+    <attr name="company_ne_id"           xs:type="string"       other:xPath="company_ne_id" />
+    <attr name="company_name"            xs:type="string"       other:xPath="company_name" />
+    <attr name="company_kana"            xs:type="string"       other:xPath="company_kana" />
+    <attr name="uid"                     xs:type="string"       other:xPath="uid" />
+    <attr name="pic_ne_id"               xs:type="string"       other:xPath="pic_ne_id" />
+    <attr name="pic_name"                xs:type="string"       other:xPath="pic_name" />
+    <attr name="pic_kana"                xs:type="string"       other:xPath="pic_kana" />
+    <attr name="pic_mail_address"        xs:type="string"       other:xPath="pic_mail_address" />
+    <attr name="refresh_token"           xs:type="string"       other:xPath="refresh_token" />
+    <attr name="result"                  xs:type="string"       other:xPath="result" />
+  </rsb:info>
+
+  <!-- Column XPaths are relative to a RepeatElement that splits the JSON into rows. -->
+  <rsb:set attr="uri"  value="https://api.next-engine.org/api_neauth" />
+  <rsb:set attr="RepeatElement"  value="/" />
+  <rsb:set attr="ContentType"  value="application/x-www-form-urlencoded" />
+  <rsb:set attr="Method" value="POST"/>
+  <rsb:set attr="Data">uid=[_connection.uid]&state=[_connection.state]&client_id=[_connection.client_id]&client_secret=[_connection.client_secret]</rsb:set>
+  <rsb:set attr="encodepostdata" value="false" />
+
+  <!-- The GET method corresponds to SELECT. Within the script block, you can see the URI modified to append a query string parameter. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <rsb:script method="GET">
+    <rsb:call op="jsonproviderGet">
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+  
+</rsb:script>

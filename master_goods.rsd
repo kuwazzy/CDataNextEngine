@@ -1,0 +1,165 @@
+<rsb:script>
+   <rsb:info title="master_goods" desc="">
+    <attr name="goods_id"                               xs:type="string"       other:xPath="goods_id" />
+    <attr name="goods_representation_id"                xs:type="string"       other:xPath="goods_representation_id" />
+    <attr name="goods_name"                             xs:type="string"       other:xPath="goods_name" />
+    <attr name="goods_foreign_name"                     xs:type="string"       other:xPath="goods_foreign_name" />
+    <attr name="goods_type_id"                          xs:type="string"       other:xPath="goods_type_id" />
+    <attr name="goods_type_name"                        xs:type="string"       other:xPath="goods_type_name" />
+    <attr name="goods_merchandise_id"                   xs:type="string"       other:xPath="goods_merchandise_id" />
+    <attr name="goods_merchandise_name"                 xs:type="string"       other:xPath="goods_merchandise_name" />
+    <attr name="goods_forwarding_method_id"             xs:type="string"       other:xPath="goods_forwarding_method_id" />
+    <attr name="goods_forwarding_method_name"           xs:type="string"       other:xPath="goods_forwarding_method_name" />
+    <attr name="goods_status_id"                        xs:type="string"       other:xPath="goods_status_id" />
+    <attr name="goods_status_name"                      xs:type="string"       other:xPath="goods_status_name" />
+    <attr name="goods_delivery_id"                      xs:type="string"       other:xPath="goods_delivery_id" />
+    <attr name="goods_delivery_name"                    xs:type="string"       other:xPath="goods_delivery_name" />
+    <attr name="goods_supplier_id"                      xs:type="string"       other:xPath="goods_supplier_id" />
+    <attr name="goods_jan_code"                         xs:type="string"       other:xPath="goods_jan_code" />
+    <attr name="goods_maker_name"                       xs:type="string"       other:xPath="goods_maker_name" />
+    <attr name="goods_maker_kana"                       xs:type="string"       other:xPath="goods_maker_kana" />
+    <attr name="goods_maker_address"                    xs:type="string"       other:xPath="goods_maker_address" />
+    <attr name="goods_maker_zip_code"                   xs:type="string"       other:xPath="goods_maker_zip_code" />
+    <attr name="goods_model_number"                     xs:type="string"       other:xPath="goods_model_number" />
+    <attr name="goods_color"                            xs:type="string"       other:xPath="goods_color" />
+    <attr name="goods_mall_category"                    xs:type="string"       other:xPath="goods_mall_category" />
+    <attr name="goods_shop_category"                    xs:type="string"       other:xPath="goods_shop_category" />
+    <attr name="goods_cost_price"                       xs:type="integer"      other:xPath="goods_cost_price" />
+    <attr name="goods_display_price"                    xs:type="integer"      other:xPath="goods_display_price" />
+    <attr name="goods_selling_price"                    xs:type="integer"      other:xPath="goods_selling_price" />
+    <attr name="goods_foreign_selling_price"            xs:type="integer"      other:xPath="goods_foreign_selling_price" />
+    <attr name="goods_wholesale_retail_ratio"           xs:type="integer"      other:xPath="goods_wholesale_retail_ratio" />
+    <attr name="goods_weight"                           xs:type="integer"      other:xPath="goods_weight" />
+    <attr name="goods_width"                            xs:type="integer"      other:xPath="goods_width" />
+    <attr name="goods_length"                           xs:type="integer"      other:xPath="goods_length" />
+    <attr name="goods_height"                           xs:type="integer"      other:xPath="goods_height" />
+    <attr name="goods_release_date"                     xs:type="datetime"     other:xPath="goods_release_date" />
+    <attr name="goods_first_time_sold_date"             xs:type="datetime"     other:xPath="goods_first_time_sold_date" />
+    <attr name="goods_last_time_sold_date"              xs:type="datetime"     other:xPath="goods_last_time_sold_date" />
+    <attr name="goods_first_time_supplied_date"         xs:type="datetime"     other:xPath="goods_first_time_supplied_date" />
+    <attr name="goods_last_time_supplied_date"          xs:type="datetime"     other:xPath="goods_last_time_supplied_date" />
+    <attr name="goods_stock_constant"                   xs:type="integer"      other:xPath="goods_stock_constant" />
+    <attr name="goods_order_point"                      xs:type="integer"      other:xPath="goods_order_point" />
+    <attr name="goods_lot"                              xs:type="integer"      other:xPath="goods_lot" />
+    <attr name="goods_publication_date"                 xs:type="datetime"     other:xPath="goods_publication_date" />
+    <attr name="goods_stock_management_flag"            xs:type="string"       other:xPath="goods_stock_management_flag" />
+    <attr name="goods_note"                             xs:type="string"       other:xPath="goods_note" />
+    <attr name="goods_visible_flag"                     xs:type="string"       other:xPath="goods_visible_flag" />
+    <attr name="goods_tag"                              xs:type="string"       other:xPath="goods_tag" />
+    <attr name="goods_location"                         xs:type="string"       other:xPath="goods_location" />
+    <attr name="goods_delivery_mail_flag"               xs:type="integer"      other:xPath="goods_delivery_mail_flag" />
+    <attr name="goods_delivery_mail_maximum_quality"    xs:type="string"       other:xPath="goods_delivery_mail_maximum_quality" />
+    <attr name="goods_gift_ok_flg"                      xs:type="integer"      other:xPath="goods_gift_ok_flg" />
+    <attr name="goods_size"                             xs:type="string"       other:xPath="goods_size" />
+    <attr name="goods_maker_model_number"               xs:type="string"       other:xPath="goods_maker_model_number" />
+    <attr name="goods_stock_alert_mail_threshold"       xs:type="integer"      other:xPath="goods_stock_alert_mail_threshold" />
+    <attr name="goods_wholesale_mortgage_threshold"     xs:type="integer"      other:xPath="goods_wholesale_mortgage_threshold" />
+    <attr name="goods_shipping_base_id"                 xs:type="string"       other:xPath="goods_shipping_base_id" />
+    <attr name="goods_mail_tag_id"                      xs:type="string"       other:xPath="goods_mail_tag_id" />
+    <attr name="goods_1_item"                           xs:type="string"       other:xPath="goods_1_item" />
+    <attr name="goods_2_item"                           xs:type="string"       other:xPath="goods_2_item" />
+    <attr name="goods_3_item"                           xs:type="string"       other:xPath="goods_3_item" />
+    <attr name="goods_4_item"                           xs:type="string"       other:xPath="goods_4_item" />
+    <attr name="goods_5_item"                           xs:type="string"       other:xPath="goods_5_item" />
+    <attr name="goods_6_item"                           xs:type="string"       other:xPath="goods_6_item" />
+    <attr name="goods_7_item"                           xs:type="string"       other:xPath="goods_7_item" />
+    <attr name="goods_8_item"                           xs:type="string"       other:xPath="goods_8_item" />
+    <attr name="goods_9_item"                           xs:type="string"       other:xPath="goods_9_item" />
+    <attr name="goods_10_item"                          xs:type="string"       other:xPath="goods_10_item" />
+    <attr name="goods_11_item"                          xs:type="string"       other:xPath="goods_11_item" />
+    <attr name="goods_12_item"                          xs:type="string"       other:xPath="goods_12_item" />
+    <attr name="goods_13_item"                          xs:type="string"       other:xPath="goods_13_item" />
+    <attr name="goods_14_item"                          xs:type="string"       other:xPath="goods_14_item" />
+    <attr name="goods_15_item"                          xs:type="string"       other:xPath="goods_15_item" />
+    <attr name="goods_16_item"                          xs:type="string"       other:xPath="goods_16_item" />
+    <attr name="goods_17_item"                          xs:type="string"       other:xPath="goods_17_item" />
+    <attr name="goods_18_item"                          xs:type="string"       other:xPath="goods_18_item" />
+    <attr name="goods_19_item"                          xs:type="string"       other:xPath="goods_19_item" />
+    <attr name="goods_20_item"                          xs:type="string"       other:xPath="goods_20_item" />
+    <attr name="goods_1_select_id"                      xs:type="integer"      other:xPath="goods_1_select_id" />
+    <attr name="goods_1_select_name"                    xs:type="string"       other:xPath="goods_1_select_name" />
+    <attr name="goods_2_select_id"                      xs:type="integer"      other:xPath="goods_2_select_id" />
+    <attr name="goods_2_select_name"                    xs:type="string"       other:xPath="goods_2_select_name" />
+    <attr name="goods_3_select_id"                      xs:type="integer"      other:xPath="goods_3_select_id" />
+    <attr name="goods_3_select_name"                    xs:type="string"       other:xPath="goods_3_select_name" />
+    <attr name="goods_4_select_id"                      xs:type="integer"      other:xPath="goods_4_select_id" />
+    <attr name="goods_4_select_name"                    xs:type="string"       other:xPath="goods_4_select_name" />
+    <attr name="goods_5_select_id"                      xs:type="integer"      other:xPath="goods_5_select_id" />
+    <attr name="goods_5_select_name"                    xs:type="string"       other:xPath="goods_5_select_name" />
+    <attr name="goods_6_select_id"                      xs:type="integer"      other:xPath="goods_6_select_id" />
+    <attr name="goods_6_select_name"                    xs:type="string"       other:xPath="goods_6_select_name" />
+    <attr name="goods_7_select_id"                      xs:type="integer"      other:xPath="goods_7_select_id" />
+    <attr name="goods_7_select_name"                    xs:type="string"       other:xPath="goods_7_select_name" />
+    <attr name="goods_8_select_id"                      xs:type="integer"      other:xPath="goods_8_select_id" />
+    <attr name="goods_8_select_name"                    xs:type="string"       other:xPath="goods_8_select_name" />
+    <attr name="goods_9_select_id"                      xs:type="integer"      other:xPath="goods_9_select_id" />
+    <attr name="goods_9_select_name"                    xs:type="string"       other:xPath="goods_9_select_name" />
+    <attr name="goods_10_select_id"                     xs:type="integer"      other:xPath="goods_10_select_id" />
+    <attr name="goods_10_select_name"                   xs:type="string"       other:xPath="goods_10_select_name" />
+    <attr name="goods_publication_pic_id"               xs:type="integer"      other:xPath="goods_publication_pic_id" />
+    <attr name="goods_publication_pic_name"             xs:type="string"       other:xPath="goods_publication_pic_name" />
+    <attr name="goods_stock_wholesale_quantity"         xs:type="integer"      other:xPath="goods_stock_wholesale_quantity" />
+    <attr name="goods_description_text"                 xs:type="string"       other:xPath="goods_description_text" />
+    <attr name="goods_description_html"                 xs:type="string"       other:xPath="goods_description_html" />
+    <attr name="goods_spec_text"                        xs:type="string"       other:xPath="goods_spec_text" />
+    <attr name="goods_spec_html"                        xs:type="string"       other:xPath="goods_spec_html" />
+    <attr name="goods_caution_text"                     xs:type="string"       other:xPath="goods_caution_text" />
+    <attr name="goods_caution_html"                     xs:type="string"       other:xPath="goods_caution_html" />
+    <attr name="goods_condition_description"            xs:type="string"       other:xPath="goods_condition_description" />
+    <attr name="goods_condition_id"                     xs:type="string"       other:xPath="goods_condition_id" />
+    <attr name="goods_hit_syohin_alert_quantity"        xs:type="integer"      other:xPath="goods_hit_syohin_alert_quantity" />
+    <attr name="goods_delivery_date_id"                 xs:type="string"       other:xPath="goods_delivery_date_id" />
+    <attr name="goods_designated_delivery_date"         xs:type="string"       other:xPath="goods_designated_delivery_date" />
+    <attr name="goods_creation_date"                    xs:type="datetime"     other:xPath="goods_creation_date" />
+    <attr name="goods_last_modified_date"               xs:type="datetime"     other:xPath="goods_last_modified_date" />
+    <attr name="goods_last_modified_null_safe_date"     xs:type="datetime"     other:xPath="goods_last_modified_null_safe_date" />
+    <attr name="goods_creator_id"                       xs:type="integer"      other:xPath="goods_creator_id" />
+    <attr name="goods_creator_name"                     xs:type="string"       other:xPath="goods_creator_name" />
+    <attr name="goods_last_modified_by_id"              xs:type="integer"      other:xPath="goods_last_modified_by_id" />
+    <attr name="goods_last_modified_by_null_safe_id"    xs:type="integer"      other:xPath="goods_last_modified_by_null_safe_id" />
+    <attr name="goods_last_modified_by_name"            xs:type="string"       other:xPath="goods_last_modified_by_name" />
+    <attr name="goods_last_modified_by_null_safe_name"  xs:type="string"       other:xPath="goods_last_modified_by_null_safe_name" />
+  </rsb:info>
+
+  <!-- Column XPaths are relative to a RepeatElement that splits the JSON into rows. -->
+  <rsb:set attr="uri"  value="https://api.next-engine.org/api_v1_master_goods/search" />
+  <rsb:set attr="RepeatElement"  value="/data" />
+  <rsb:set attr="ContentType"  value="application/x-www-form-urlencoded" />
+  <rsb:set attr="Method" value="POST"/>
+  <rsb:set attr="Data">access_token=[_connection.access_token]&refresh_token=[_connection.refresh_token]&fields=goods_id,goods_representation_id,goods_name,goods_foreign_name,goods_type_id,goods_type_name,goods_merchandise_id,goods_merchandise_name,goods_forwarding_method_id,goods_forwarding_method_name,goods_status_id,goods_status_name,goods_delivery_id,goods_delivery_name,goods_supplier_id,goods_jan_code,goods_maker_name,goods_maker_kana,goods_maker_address,goods_maker_zip_code,goods_model_number,goods_color,goods_mall_category,goods_shop_category,goods_cost_price,goods_display_price,goods_selling_price,goods_foreign_selling_price,goods_wholesale_retail_ratio,goods_weight,goods_width,goods_length,goods_height,goods_release_date,goods_first_time_sold_date,goods_last_time_sold_date,goods_first_time_supplied_date,goods_last_time_supplied_date,goods_stock_constant,goods_order_point,goods_lot,goods_publication_date,goods_stock_management_flag,goods_note,goods_visible_flag,goods_tag,goods_location,goods_delivery_mail_flag,goods_delivery_mail_maximum_quality,goods_gift_ok_flg,goods_size,goods_maker_model_number,goods_stock_alert_mail_threshold,goods_wholesale_mortgage_threshold,goods_shipping_base_id,goods_mail_tag_id,goods_1_item,goods_2_item,goods_3_item,goods_4_item,goods_5_item,goods_6_item,goods_7_item,goods_8_item,goods_9_item,goods_10_item,goods_11_item,goods_12_item,goods_13_item,goods_14_item,goods_15_item,goods_16_item,goods_17_item,goods_18_item,goods_19_item,goods_20_item,goods_1_select_id,goods_1_select_name,goods_2_select_id,goods_2_select_name,goods_3_select_id,goods_3_select_name,goods_4_select_id,goods_4_select_name,goods_5_select_id,goods_5_select_name,goods_6_select_id,goods_6_select_name,goods_7_select_id,goods_7_select_name,goods_8_select_id,goods_8_select_name,goods_9_select_id,goods_9_select_name,goods_10_select_id,goods_10_select_name,goods_publication_pic_id,goods_publication_pic_name,goods_stock_wholesale_quantity,goods_description_text,goods_description_html,goods_spec_text,goods_spec_html,goods_caution_text,goods_caution_html,goods_condition_description,goods_condition_id,goods_hit_syohin_alert_quantity,goods_delivery_date_id,goods_designated_delivery_date,goods_creation_date,goods_last_modified_date,goods_last_modified_null_safe_date,goods_creator_id,goods_creator_name,goods_last_modified_by_id,goods_last_modified_by_null_safe_id,goods_last_modified_by_name,goods_last_modified_by_null_safe_name</rsb:set>
+  <rsb:set attr="encodepostdata" value="false" />
+
+  <!-- The GET method corresponds to SELECT. Within the script block, you can see the URI modified to append a query string parameter. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <rsb:script method="GET">
+    <rsb:call op="jsonproviderGet">
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->
+  <rsb:script method="POST">
+    <rsb:set attr="method" value="POST"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Inserts are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->
+  <rsb:script method="MERGE">
+    <rsb:set attr="method" value="PUT"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Updates are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->
+  <rsb:script method="DELETE">
+    <rsb:set attr="method" value="DELETE"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Deletes are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+</rsb:script>
